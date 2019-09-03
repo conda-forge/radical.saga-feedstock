@@ -11,9 +11,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed  .
-  skip: True  # [py3k or win]
+  skip: True  # [py2k or win]
 
 requirements:
   host:
@@ -23,7 +23,7 @@ requirements:
     - python
     - apache-libcloud
     - parse
-    - radical.utils >=0.50.0
+    - radical.utils >=0.90.0
     
 test:
   imports:
