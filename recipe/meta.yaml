@@ -1,6 +1,6 @@
 {% set name = "radical.saga" %}
-{% set version = "0.90.0" %}
-{% set sha256 = "579e0d892ce381c05610c02af66fcaa753965f8dc9939b8ed8319597010be55b" %}
+{% set version = "0.90.6" %}
+{% set sha256 = "496a77dcaaa8ce35db3f97e029df7da091e33db349895a2be60f361b7662a1e8" %}
 
 package:
   name: {{ name|lower }}
