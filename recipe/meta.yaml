@@ -1,6 +1,6 @@
 {% set name = "radical.saga" %}
-{% set version = "1.11.1" %}
-{% set sha256 = "edb1def63fadd192a4be4f508e9e65669745843e158ce27a965bf2f43d18b84d" %}
+{% set version = "1.12.0" %}
+{% set sha256 = "769c83bab95c0e3ef970da0fa6cb30878d7a31216ff8b542e894686357f7cb5b" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed  .
   skip: true  # [py2k or win]
 
