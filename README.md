@@ -1,11 +1,11 @@
-About radical.saga
-==================
+About radical.saga-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/radical.saga-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/radical-cybertools/radical.saga
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/radical.saga-feedstock/blob/main/LICENSE.txt)
 
 Summary: RADICAL-SAGA defines a high-level interface for distributed computing infrastructures
 
