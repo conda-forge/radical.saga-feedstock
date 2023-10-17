@@ -1,6 +1,6 @@
 {% set name = "radical.saga" %}
-{% set version = "1.36.0" %}
-{% set sha256 = "0e26f4e450e741e7bd92fbfa78e571e76f41fe925911051dd837b15003a31c52" %}
+{% set version = "1.41.0" %}
+{% set sha256 = "fabfda94ceb92c009c53fd2e165ecfbe062754495a28836f65331b938e646b38" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
-  skip: true  # [py2k or py>39 or win]
+  skip: true  # [py2k or win]
 
 requirements:
   host:
@@ -23,7 +23,7 @@ requirements:
     - python
     - apache-libcloud
     - parse
-    - radical.utils >=1.12
+    - radical.utils >=1.40
 
 test:
   imports:
