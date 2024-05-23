@@ -1,29 +1,30 @@
 {% set name = "radical.saga" %}
-{% set version = "1.47.0" %}
-{% set sha256 = "fc9a8fc060e708852ce6c40b08a65111f8d72b9ad5f8afef9ceaa866c1351233" %}
+{% set version = "1.60.0" %}
+{% set sha256 = "1a69b0a9d06452ca8db9ebaa4a96b31ce28f61c267d73723e4e48a0fc4daa99f" %}
 
 package:
   name: {{ name|lower }}
+  name_pkg: {{ name|replace(".", "_") }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name_pkg }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
-  skip: true  # [py2k or win]
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
   run:
-    - python
+    - python >=3.7
     - apache-libcloud
     - parse
-    - radical.utils >=1.40
+    - radical.utils >=1.60
 
 test:
   imports:
@@ -41,6 +42,7 @@ about:
     (SAGA) standard. RS works as a light-weight access layer for distributed 
     computing infrastructures, providing adaptors for different middleware 
     systems and services.
+  doc_url: https://radicalsaga.readthedocs.io
   dev_url: https://github.com/radical-cybertools/radical.saga
 
 extra:
