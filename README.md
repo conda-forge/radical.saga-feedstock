@@ -11,6 +11,8 @@ Summary: RADICAL-SAGA defines a high-level interface for distributed computing i
 
 Development: https://github.com/radical-cybertools/radical.saga
 
+Documentation: https://radicalsaga.readthedocs.io
+
 RADICAL-SAGA (RS) is a Python package that implements the interface
 specification of the Open Grid Forum (OGF) Simple API for Grid Applications
 (SAGA) standard. RS works as a light-weight access layer for distributed
