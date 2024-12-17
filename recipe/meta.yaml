@@ -1,13 +1,13 @@
 {% set name = "radical.saga" %}
-{% set version = "1.81.0" %}
-{% set sha256 = "e19550190dea5dd7173c12869f6c41351117304d2c87dba517addb78d1c297fa" %}
+{% set version = "1.90.0" %}
+{% set sha256 = "55758339f58087477574ed598e5a34cb99d045a540a74ba9e11b34eead4af78d" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace(".", "_") }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace(".", "_") }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
