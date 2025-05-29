@@ -1,6 +1,6 @@
 {% set name = "radical.saga" %}
-{% set version = "1.81.0" %}
-{% set sha256 = "e19550190dea5dd7173c12869f6c41351117304d2c87dba517addb78d1c297fa" %}
+{% set version = "1.102.0" %}
+{% set sha256 = "215b41f2ff421f1729c012bfa0d958bbd2f36ec912243f1c6a70fb4e62ae9134" %}
 
 package:
   name: {{ name|lower }}
@@ -11,9 +11,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
@@ -21,15 +21,17 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-libcloud
+    - radical.utils >=1.100.0,<1.110
     - parse
-    - radical.utils >=1.60
 
 test:
-  requires:
-    - python {{ python_min }}
   imports:
     - radical.saga
+  commands:
+    - pip check
+  requires:
+    - python {{ python_min }}
+    - pip
 
 about:
   home: https://github.com/radical-cybertools/radical.saga
