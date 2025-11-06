@@ -1,6 +1,6 @@
 {% set name = "radical.saga" %}
-{% set version = "1.102.0" %}
-{% set sha256 = "215b41f2ff421f1729c012bfa0d958bbd2f36ec912243f1c6a70fb4e62ae9134" %}
+{% set version = "1.103.0" %}
+{% set sha256 = "6af345de30f7f6ba83f7d44560bfc8ea4e8794cfd50596c8fcfa50205c0645a0" %}
 
 package:
   name: {{ name|lower }}
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - radical.utils >=1.100.0,<1.110
+    - radical.utils >=1.100,<1.110
     - parse
 
 test:
